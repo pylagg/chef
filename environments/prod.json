@@ -1,0 +1,24 @@
+{
+    "name": "prod",
+    "description": "This is an example environment defined as JSON",
+    "chef_type": "environment",
+    "json_class": "Chef::Environment",
+    "default_attributes": {
+    },
+
+    "override_attributes": {
+		
+	    "apache": { 
+			"sites": {
+				"example.com": { 
+					"servername": "example.in.com"
+				}
+			}
+		}		
+    },
+    "cookbook_versions": {    
+	    "apache": "= 0.1.0",
+	    "java": "= 0.1.0"
+
+    }
+}

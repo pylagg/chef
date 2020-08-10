@@ -1,0 +1,18 @@
+{
+    "name": "ProjectA",
+    "description": "This is an example role defined as JSON",
+    "chef_type": "role",
+    "json_class": "Chef::Role",
+    "default_attributes": {
+    },
+    "override_attributes": {
+	        "java": {
+     			 "motd": "Message of the day is override by the role ProjectA",
+     			 "version": "openjdk-11-jre-headless"
+    		}
+    },
+    "run_list": [
+        "recipe[apache]",
+	"recipe[java]"
+    ]
+}

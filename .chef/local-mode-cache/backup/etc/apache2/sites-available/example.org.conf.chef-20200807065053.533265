@@ -1,0 +1,10 @@
+<VirtualHost *:443>
+        ServerAdmin admin@example.org
+        ServerName example.org
+        ServerAlias www.example.org
+        DocumentRoot /var/www/html/example.org/public_html
+        ErrorLog /var/www/html/example.org/logs/error.log
+        <Directory /var/www/html/example.org/public_html>
+                Require all granted
+        </Directory>
+</VirtualHost>
